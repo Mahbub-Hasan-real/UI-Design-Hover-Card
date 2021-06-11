@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(220deg, rgb(141, 0, 177), rgb(192, 2, 135), rgb(236, 181, 0), rgb(236, 213, 5));
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container:hover .card
+{
+    filter: blur(20px);
+    transform: scale(.9);
+    opacity: .5;
+    transition: .3s ease-in-out;
+}
+.container .card:hover
+{
+    filter: blur(0px);
+    transform: scale(1);
+    opacity: 1;
+}
+.card
+{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.247);
+}
+.card .circle
+{
+    position: absolute;
+    background: rgb(226, 222, 1);
+    clip-path: circle(at 50% 50%);
+    top: -220px;
+    width: 400px;
+    height: 400px;
+}
+.card:nth-child(2) .circle
+{
+    background: rgb(192, 2, 135);
+}
+.card:nth-child(3) .circle
+{
+    background: rgb(141, 0, 177);
+}
+.card .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card .content h2
+{
+    z-index: 1;
+    margin-bottom: 30px;
+    transform: translateY(-10px);
+    font-size: 3em;
+    color: #fff;
+}
+.card .content p
+{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+}
+.card .content .btn
+{
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    background: rgb(226, 222, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+.card:nth-child(2) .btn
+{
+    background: rgb(192, 2, 135);
+}
+.card:nth-child(3) .btn
+{
+    background: rgb(141, 0, 177);
+}
+.card .content .btn a
+{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
